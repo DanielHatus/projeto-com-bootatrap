@@ -12,8 +12,16 @@
             font-family: 'font-distorcida';
             src: url(fontes/font-distorcida.ttf) format(truetype);
         }
+        @font-face {
+            font-family:'font-footer' ;
+            src: url(fontes/Grafite.otf) format(opentype);
+        }
+        html{
+            font-size:16px;
+        }
         :root{
-            --fontedistoricda:"font-distorcida"
+            --fontedistoricda:"font-distorcida";
+            --fontefooter:"font-footer"
         }
         .icon{
             color:white;
@@ -49,12 +57,15 @@
         }
         main{
             background-color:white;
-            height:100vh;
+            height:auto;
             border-radius:8px;
             border:2px solid black;
             outline:2px solid red;
+            margin:0px;
+            box-sizing: border-box;
+            
         }
-        main>h2{
+        main>section>h2{
             font-family:var(--fontedistoricda);
             color:red;
             text-shadow:
@@ -62,7 +73,81 @@
             0px 0px 6px white,
             0px 0px 9px red;
             background-image:linear-gradient(to right,black,red,transparent);
-            width:30vw;
+            width:100%;
+            margin-left:0px;
+        }
+        .section-1{
+            margin-left:-11px;
+            width:100%;
+        }
+        section>p{
+            text-align:justify;
+            text-indent: 40px;
+        }
+        .section-2{
+         width:100%;
+         height:500px;
+
+        }
+        .section-3{
+            margin-left:-11px;
+            width:100%;
+        }
+        .section-4{
+            width:100%;
+            height:500px;
+        }
+        .section-5{
+            margin-left:-11px;
+            width:100%;
+        }
+        .section-6{
+            width:100%;
+            height:500px;
+        }
+        .figure-1{
+            border:1px solid black;
+            outline:2px solid red;
+            background-image: url('imagens/algoritmo.avif');
+            background-size: 100% 100%;
+            height:100%;
+            width:90%;
+            border-radius:8px; 
+        }
+        .figure-2{
+            border:1px solid black;
+            outline:2px solid red;
+            background-image:url(imagens/frameworks.png);
+            background-size:100% 100%;
+            width:90%;
+            height:100%;
+            border-radius:8px;
+        }
+        .figure-3{
+            border:1px solid black;
+            outline:2px solid red; 
+            background-image:url(imagens/Principais-linguagens-2.jpg);
+            background-size:100% 100%;
+            width:90%;
+            height:100%;
+            border-radius:8px;
+        }
+        footer{
+            background-color:black;
+            color:white;
+            height:50px;
+            font-size:1.5rem;
+        }
+        footer>a{
+            color:red;
+            text-decoration:none;
+            font-family:var(--fontefooter);
+            font-size:1.9rem;
+            margin-top:10px;
+            margin-left:1px;
+        }
+        footer>a:hover{
+            text-decoration:underline;
         }
     </style>
    
@@ -84,8 +169,54 @@
 </header>
 
 <main class="container">
-<h2> O Que E Programacao ?</h2>
+<section class="section-1">
+    <h2> O Que E Programacao ?</h2>
+    <p><strong>Programação é o processo de escrever instruções em uma linguagem específica para que um computador execute tarefas.</strong> Com ela, é possível criar sites, aplicativos, jogos e sistemas automatizados, facilitando o dia a dia e otimizando processos. O código segue uma lógica estruturada e pode ser interpretado ou compilado para funcionar corretamente. O programador escreve, testa e corrige erros (bugs) antes de disponibilizar o software.  
+
+    A programação está presente em praticamente tudo que usamos, desde redes sociais até sistemas bancários. Aprender a programar ajuda a desenvolver o raciocínio lógico, automatizar tarefas e criar soluções inovadoras, tornando-se uma habilidade essencial no mundo digital e uma grande oportunidade no mercado de tecnologia.</p>  
+</section>
+
+<section class="d-flex justify-content-center section-2">
+    <figure class='figure-1'>
+
+    </figure>
+</section>
+<br>
+<section class="section-3">
+<h2>O Que E Framework ?</h2>
+<p><strong>Um framework é um conjunto de ferramentas, bibliotecas e padrões que facilita o desenvolvimento de software.</strong> Ele fornece uma estrutura pronta para que os programadores não precisem começar do zero, agilizando a criação de sites, aplicativos e sistemas. Os frameworks incluem códigos reutilizáveis, funções pré-definidas e boas práticas que ajudam a organizar o projeto de forma eficiente.  
+
+ Existem frameworks para diversas áreas, como desenvolvimento web, mobile e inteligência artificial. Alguns exemplos populares são React e Angular para interfaces web, Django e Laravel para aplicações back-end e Flutter para apps móveis. Utilizar um framework melhora a produtividade, reduz erros e garante mais segurança no desenvolvimento, tornando-o uma escolha essencial para programadores que querem criar soluções modernas e escaláveis.</p>
+</section>
+
+<section class="section-4 d-flex justify-content-center">
+    <figure class="figure-2">
+    </figure>
+
+</section>
+<br>
+
+<section class="section-5">
+    <h2>O Que E Linguagem De Programacao</h2>
+
+    <p><strong>Uma linguagem de programação é um sistema de comunicação usado para escrever códigos que instruem um computador a executar tarefas.</strong> Assim como usamos línguas diferentes para nos comunicar, os programadores utilizam linguagens específicas para criar softwares, sites, aplicativos e sistemas.
+
+    Cada linguagem possui sua própria sintaxe e regras, determinando como os comandos devem ser escritos e interpretados. Algumas são mais fáceis e intuitivas, como Python e JavaScript, enquanto outras, como C e Assembly, oferecem mais controle sobre o hardware.
+        
+    As linguagens podem ser classificadas em diferentes tipos, como linguagens de alto nível, que são mais próximas da linguagem humana, e linguagens de baixo nível, que se aproximam do funcionamento interno do computador. A escolha da linguagem depende do tipo de projeto e dos objetivos do programador.</p>
+</section>
+
+<section class="section-6 d-flex justify-content-center">
+    <figure class="figure-3">
+
+    </figure>
+</section>
+<br>
 </main>
+
+<footer class="container-fluid d-flex justify-content-center align-items-center">
+    Desenvolvido Por <a href="https://github.com/DanielHatus?tab=repositories" target="_blank" rel="external">&copy;Daniel Hatus</a>
+</footer>
 
 </body>
 </html>
